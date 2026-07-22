@@ -2,7 +2,7 @@ import { logoutAction } from "@/app/actions";
 import { Avatar } from "@/components/shared";
 import { ROLE_LABEL } from "@/lib/utils";
 import type { AppUser } from "@/lib/data";
-import { BookOpenCheck, ClipboardPenLine, Coffee, FileText, Landmark, LayoutDashboard, LogOut, Map, Settings, UsersRound } from "lucide-react";
+import { BookOpen, BookOpenCheck, ClipboardPenLine, Coffee, FileText, Landmark, LayoutDashboard, LogOut, Map, Settings, UsersRound } from "lucide-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -23,7 +23,7 @@ export function AppShell({ user, children }: { user: AppUser; children: ReactNod
     ...(user.role === "wali" ? [{ href: "/portal-wali", label: "Portal Wali", icon: Landmark }] : []),
   ];
   return (
-    <div className="min-h-screen bg-[#f6f8f7]">
+    <div className="min-h-screen bg-[#f6f8f7] lg:pl-[258px]">
       <aside className="fixed inset-y-0 left-0 z-30 hidden w-[258px] flex-col border-r border-emerald-950/10 bg-emerald-950 px-4 py-5 text-emerald-50 lg:flex">
         <Link href="/dashboard" className="mb-8 flex items-center gap-3 px-2">
           <span className="grid size-10 place-items-center rounded-xl bg-gradient-to-br from-amber-300 to-amber-500 font-display text-lg font-black text-emerald-950 shadow-lg shadow-emerald-900/30">م</span>
@@ -45,6 +45,10 @@ export function AppShell({ user, children }: { user: AppUser; children: ReactNod
           })}
         </nav>
         <nav className="mt-4 space-y-1">
+          <Link href="/docs" className="group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-amber-300 transition hover:bg-white/10 hover:text-white">
+            <BookOpen size={19} className="text-amber-200 group-hover:text-amber-300" />
+            Dokumentasi
+          </Link>
           <Link href="/donasi" className="group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-amber-300 transition hover:bg-white/10 hover:text-white">
             <Coffee size={19} className="text-amber-200 group-hover:text-amber-300" />
             Donasi
@@ -70,6 +74,9 @@ export function AppShell({ user, children }: { user: AppUser; children: ReactNod
           </div>
         </div>
       </aside>
+      <main className="px-4 py-6 lg:px-8 lg:py-8">
+        {children}
+      </main>
     </div>
   );
 }
