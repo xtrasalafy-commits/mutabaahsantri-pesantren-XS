@@ -1,0 +1,18 @@
+{
+  "/(aplikasi)/dashboard/page": "app/(aplikasi)/dashboard/page.js",
+  "/(aplikasi)/laporan/page": "app/(aplikasi)/laporan/page.js",
+  "/(aplikasi)/master-data/page": "app/(aplikasi)/master-data/page.js",
+  "/(aplikasi)/murajaah/page": "app/(aplikasi)/murajaah/page.js",
+  "/(aplikasi)/pengaturan/page": "app/(aplikasi)/pengaturan/page.js",
+  "/(aplikasi)/portal-wali/page": "app/(aplikasi)/portal-wali/page.js",
+  "/(aplikasi)/progress/page": "app/(aplikasi)/progress/page.js",
+  "/(aplikasi)/santri/[id]/page": "app/(aplikasi)/santri/[id]/page.js",
+  "/(aplikasi)/setoran/page": "app/(aplikasi)/setoran/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/health/route": "app/api/health/route.js",
+  "/donasi/page": "app/donasi/page.js",
+  "/lupa-kata-sandi/page": "app/lupa-kata-sandi/page.js",
+  "/masuk/page": "app/masuk/page.js",
+  "/page": "app/page.js"
+}

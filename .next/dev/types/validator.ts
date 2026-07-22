@@ -128,6 +128,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../../src/app/donasi/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/donasi">> = Specific
+  const handler = {} as typeof import("../../../src/app/donasi/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../src/app/lupa-kata-sandi/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/lupa-kata-sandi">> = Specific

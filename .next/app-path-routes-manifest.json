@@ -1,0 +1,18 @@
+{
+  "/(aplikasi)/dashboard/page": "/dashboard",
+  "/(aplikasi)/laporan/page": "/laporan",
+  "/(aplikasi)/master-data/page": "/master-data",
+  "/(aplikasi)/murajaah/page": "/murajaah",
+  "/(aplikasi)/pengaturan/page": "/pengaturan",
+  "/(aplikasi)/portal-wali/page": "/portal-wali",
+  "/(aplikasi)/progress/page": "/progress",
+  "/(aplikasi)/santri/[id]/page": "/santri/[id]",
+  "/(aplikasi)/setoran/page": "/setoran",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/health/route": "/api/health",
+  "/donasi/page": "/donasi",
+  "/lupa-kata-sandi/page": "/lupa-kata-sandi",
+  "/masuk/page": "/masuk",
+  "/page": "/"
+}

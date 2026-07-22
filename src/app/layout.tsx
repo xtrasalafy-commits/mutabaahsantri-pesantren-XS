@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import TrakteerDonationWidget from "@/components/trakteer-donation-widget";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  return <html lang="id"><body>{children}</body></html>;
+  return <html lang="id"><body>{children}<TrakteerDonationWidget /></body></html>;
 }
