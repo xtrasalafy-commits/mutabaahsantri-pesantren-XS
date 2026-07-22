@@ -1,1 +1,2 @@
-{"timestamp":"00:00:02.275","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:02.105","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:20:51.788","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
