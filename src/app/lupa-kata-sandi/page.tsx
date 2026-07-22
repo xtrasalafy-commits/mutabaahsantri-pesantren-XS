@@ -1,0 +1,9 @@
+import { requestPasswordResetAction } from "@/app/actions";
+import { MessageBanner } from "@/components/shared";
+import { ArrowLeft, KeyRound, Mail } from "lucide-react";
+import Link from "next/link";
+
+export default async function ForgotPasswordPage({ searchParams }: { searchParams: Promise<{ galat?: string }> }) {
+  const params = await searchParams;
+  return <main className="grid min-h-screen place-items-center bg-[#f6f8f7] px-5"><section className="w-full max-w-md rounded-3xl border border-slate-200 bg-white p-7 shadow-xl shadow-slate-900/5"><Link href="/masuk" className="inline-flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-emerald-700"><ArrowLeft size={16}/>Kembali ke masuk</Link><span className="mt-8 grid size-12 place-items-center rounded-2xl bg-emerald-50 text-emerald-700"><KeyRound size={23}/></span><h1 className="mt-5 font-display text-3xl font-bold text-slate-950">Atur ulang kata sandi</h1><p className="mt-2 text-sm leading-6 text-slate-500">Masukkan email terdaftar. Pada versi demo, Admin Pondok akan menerima permintaan Anda melalui notifikasi aplikasi.</p><div className="mt-5"><MessageBanner message={params.galat} type="error"/></div><form action={requestPasswordResetAction} className="mt-6"><label><span className="mb-1.5 block text-xs font-bold text-slate-600">Alamat email</span><span className="relative block"><Mail className="pointer-events-none absolute left-3 top-3 text-slate-400" size={17}/><input name="email" required type="email" placeholder="nama@pondok.id" className="w-full rounded-xl border border-slate-200 py-2.5 pl-10 pr-3 text-sm outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10"/></span></label><button className="mt-5 w-full rounded-xl bg-emerald-900 px-4 py-3 text-sm font-bold text-white transition hover:bg-emerald-800">Kirim Permintaan</button></form></section></main>;
+}
